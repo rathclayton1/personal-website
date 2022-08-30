@@ -5,7 +5,7 @@ import Portfolio from "./Pages/Portfolio";
 import Drums from "./Pages/Drums";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
-import Navbar from './Pages/Navbar';
+import Navbar from './Components/Navbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -41,11 +41,11 @@ class App extends Component {
       <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/devportfolio" component={Portfolio} />
-        <Route path="/drums" component={Drums} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/portfolio" component={<Portfolio />} />
+        <Route path="/drums" component={<Drums />} />
+        <Route path="/blog" component={<Blog />} />
+        <Route path="/contact" component={<Contact />} />
       </Routes>
     </Router>
       </ThemeProvider>

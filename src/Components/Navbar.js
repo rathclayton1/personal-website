@@ -6,10 +6,10 @@ import {
     Typography,
     useTheme,
     useMediaQuery,
-    Link,
+    Link
   } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import DrawerComponent from './Drawer';
+import { DrawerComponent, CoolButton } from './Drawer';
   
   const useStyles = makeStyles((theme) => ({
     navlinks: {
@@ -18,20 +18,10 @@ import DrawerComponent from './Drawer';
     },
    logo: {
       flexGrow: "1",
-      cursor: "pointer",
-    },
-    link: {
-      textDecoration: "none",
-      color: "white",
-      fontSize: "20px",
-      marginLeft: theme.spacing(20),
-      "&:hover": {
-        color: "yellow",
-        borderBottom: "1px solid white",
-      },
     },
   }));
 
+  
  export const Navbar = () => {
     const classes = useStyles();
     const theme = useTheme();
@@ -41,25 +31,27 @@ import DrawerComponent from './Drawer';
       <AppBar position="static">
         <CssBaseline />
         <Toolbar>
-          <Typography variant="h4" className={classes.logo}>
+          <Typography fontFamily='Silkscreen' color="secondary" variant="h4" className={classes.logo}>
+            <Link underline="none" color="secondary" href="/">
             Clayton Rath
+            </Link>
           </Typography>
           {isMobile ? (
           <DrawerComponent />
         ) : (
             <div className={classes.navlinks}>
-              <Link to="/devportfolio" className={classes.link}>
-                Development Portfolio
-              </Link>
-              <Link to="/drums" className={classes.link}>
+            <CoolButton size="large" color="secondary" href="/portfolio">
+                Portfolio
+              </CoolButton>
+              <CoolButton size="large" color="secondary" href="/drums">
                 Drums
-              </Link>
-              <Link to="/blog" className={classes.link}>
+              </CoolButton>
+              <CoolButton size="large" color="secondary" href="/blog">
                 Blog
-              </Link>
-              <Link to="/contact" className={classes.link}>
+              </CoolButton>
+              <CoolButton size="large" color="secondary" href="/contact">
                 Contact
-              </Link>
+              </CoolButton>
             </div>
         )}
         </Toolbar>

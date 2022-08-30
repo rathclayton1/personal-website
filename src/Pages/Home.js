@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from "./Navbar";
 import { makeStyles } from "@mui/styles"
-import { Box } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
+import Image from '../Images/HomeDrums.jpeg'
 
 const useStyles = makeStyles((theme) => ({
     hero: {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpaperaccess.com/cool-nature')`,
+      backgroundImage: `url(${Image})`,
       height: "500px",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -14,9 +14,11 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      color: "#fff",
       fontSize: "4rem",
-    }
+    },
+    blogsContainer: {
+        paddingTop: theme.spacing(3)
+      },
 }))
 
 export const Home = () => {
@@ -24,12 +26,9 @@ export const Home = () => {
     const classes = useStyles();
 
     return (
-        <>
-            <Navbar/>
-            <Box className={classes.hero}>
-                <Box>Hello</Box>
-            </Box>
-        </>
+        <Box className={classes.hero}>
+        <Box>Welcome!</Box>
+      </Box>
     );
 
 };

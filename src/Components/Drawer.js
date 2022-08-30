@@ -16,7 +16,7 @@ export const CoolButton = styled(Button)(() => ({
   fontFamily: [
     'Silkscreen',
   ].join(','),
-  fontSize: 'large'
+  fontSize: 'large',
 }));
 
 export function DrawerComponent() {
@@ -53,7 +53,7 @@ export function DrawerComponent() {
           </ListItem>
         </List>
       </Drawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton size="large" onClick={() => setOpenDrawer(!openDrawer)}>
         <Menu color="secondary"/>
       </IconButton>
       </>
