@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles }from '@mui/styles';
-import { Typography, Toolbar, Link, Button } from '@mui/material';
-import CoolButton from './Drawer';
+import { Typography, Toolbar, Button } from '@mui/material';
 import Image from '../Images/Footer.png';
 import { Facebook, YouTube, GitHub, LinkedIn, Instagram, Twitter } from "@mui/icons-material"
 

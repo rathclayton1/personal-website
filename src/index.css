@@ -16,3 +16,8 @@ code {
   font-family: 'Silkscreen';
   src: local('Silkscreen'), url(./Fonts/Silkscreen-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans'), url(./Fonts/WorkSans-Medium.ttf) format('truetype');
+}
