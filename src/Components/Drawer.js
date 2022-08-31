@@ -43,7 +43,7 @@ export function DrawerComponent() {
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-            <CoolButton className="button" size="large" color="secondary"  href="/blog">Blog</CoolButton>
+            <CoolButton size="large" color="secondary"  href="/blog">Blog</CoolButton>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
@@ -53,8 +53,8 @@ export function DrawerComponent() {
           </ListItem>
         </List>
       </Drawer>
-      <IconButton size="large" onClick={() => setOpenDrawer(!openDrawer)}>
-        <Menu color="secondary"/>
+      <IconButton disableRipple style={{"&:hover": {backgroundColor: "transparent"}}} size="large" onClick={() => setOpenDrawer(!openDrawer)}>
+        <Menu style={{height: "50px", width: "50px"}} color="secondary"/>
       </IconButton>
       </>
   );

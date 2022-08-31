@@ -6,6 +6,7 @@ import Drums from "./Pages/Drums";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -30,6 +31,7 @@ const theme = createTheme(
       info: {
         main: '#2196f3',
       },
+      
     },
   }
 );
@@ -37,7 +39,8 @@ const theme = createTheme(
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider className={theme.container} theme={theme}>
+      <div className={theme.wrap}>
       <Router>
       <Navbar />
       <Routes>
@@ -48,6 +51,8 @@ class App extends Component {
         <Route path="/contact" component={<Contact />} />
       </Routes>
     </Router>
+    </div>
+    <Footer/>
       </ThemeProvider>
     )
   }

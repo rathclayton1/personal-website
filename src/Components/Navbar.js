@@ -19,6 +19,15 @@ import { DrawerComponent, CoolButton } from './Drawer';
    logo: {
       flexGrow: "1",
     },
+    sticky: {
+      position: 'sticky',
+      top: '0'
+    },
+    link: {
+      [theme.breakpoints.down("md")]: {
+        height: "16em"
+      }
+    }
   }));
 
   
@@ -28,10 +37,10 @@ import { DrawerComponent, CoolButton } from './Drawer';
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-      <AppBar position="static">
+      <AppBar className={classes.sticky}>
         <CssBaseline />
         <Toolbar>
-          <Typography fontFamily='Silkscreen' color="secondary" variant="h4" className={classes.logo}>
+          <Typography className={classes.link} fontFamily='Silkscreen' color="secondary" variant="h4" className={classes.logo}>
             <Link underline="none" color="secondary" href="/">
             Clayton Rath
             </Link>
