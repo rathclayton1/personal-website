@@ -39,7 +39,7 @@ const theme = createTheme(
 class App extends Component {
   render() {
     return (
-      <ThemeProvider className={theme.container} theme={theme}>
+      <ThemeProvider theme={theme}>
       <div className={theme.wrap}>
       <Router>
       <Navbar />

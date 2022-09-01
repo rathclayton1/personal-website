@@ -28,10 +28,10 @@ import { DrawerComponent, CoolButton } from './Drawer';
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-      <AppBar position='="static'>
+      <AppBar position="static">
         <CssBaseline />
         <Toolbar>
-          <Typography className={classes.link} fontFamily='Silkscreen' color="secondary" variant="h4">
+          <Typography className={classes.link} fontFamily="Silkscreen" color="secondary" variant="h4">
             <Link underline="none" color="secondary" href="/">
             Clayton Rath
             </Link>
