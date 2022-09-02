@@ -18,6 +18,9 @@ import { DrawerComponent, CoolButton } from './Drawer';
     },
     link: {
       flexGrow: "1",
+    },
+    app: {
+      width: "100%"
     }
   }));
 
@@ -28,9 +31,9 @@ import { DrawerComponent, CoolButton } from './Drawer';
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-      <AppBar position="static">
+      <AppBar className={classes.app} position="static">
         <CssBaseline />
-        <Toolbar>
+        <Toolbar className={classes.app}>
           <Typography className={classes.link} fontFamily="Silkscreen" color="secondary" variant="h4">
             <Link underline="none" color="secondary" href="/">
             Clayton Rath

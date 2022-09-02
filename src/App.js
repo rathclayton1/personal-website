@@ -40,7 +40,6 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-      <div className={theme.wrap}>
       <Router>
       <Navbar />
       <Routes>
@@ -51,7 +50,6 @@ class App extends Component {
         <Route path="/contact" component={<Contact />} />
       </Routes>
     </Router>
-    </div>
     <Footer/>
       </ThemeProvider>
     )

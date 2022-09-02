@@ -1,19 +1,26 @@
 import React from 'react';
 import { makeStyles } from "@mui/styles"
-import { Box, Typography, Card, Unstable_Grid2 as Grid} from '@mui/material';
+import { Box, Typography, Container, Card, Unstable_Grid2 as Grid} from '@mui/material';
 import WCDrums from '../Images/WCD.png';
 import Cru22 from '../Images/Cru22M.png';
-import ImageShadow from 'react-image-shadow';
 
 const useStyles = makeStyles((theme) => ({
     WCDrums: {
-      maxWidth: "30em",
-      maxHeight: "30em",
+      maxWidth: "23em",
+      maxHeight: "23em",
     },
     Cru22: {
-      maxWidth: "30em",
-      maxHeight: "30em",
+      maxWidth: "23em",
+      maxHeight: "23em",
     },
+    contain: {
+      padding: theme.spacing(0, 1)
+    },
+    heroImage: {
+      height: "100%",
+    width: "100%",
+    zIndex: 1,
+    }
 }))
 
 
@@ -22,9 +29,10 @@ const useStyles = makeStyles((theme) => ({
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" overflow="auto">
+    <div style={{overflowX: "hidden", backgroundImage: "../Images/green.webp"}}>
+    <Grid container className={classes.contain} spacing={2} direction="column" overflow="auto">
       <Grid item>
-        <Grid container justify="flex-end" alignItems="center" direction="row">
+        <Grid container spacing={3} justify="flex-end" alignItems="center" direction="row">
           <Grid item xs={8} sm={6}>
             <Typography paddingTop="0.5em" variant="h1" align="left" fontFamily="Silkscreen">
               Hello!
@@ -36,17 +44,21 @@ const useStyles = makeStyles((theme) => ({
           </Grid>
           <Grid item xs={12} sm={6}>
             <Grid container direction="column" xs={12} overflow="auto" disableEqualOverflow>
-              <Grid item marginLeft="0">
+              <Grid item>
                 <img src={WCDrums} alt="me" className={classes.WCDrums}/>
               </Grid>
-              <Grid mdOffset="auto" item>
-                <img src={Cru22} className={classes.Cru22}/>
+              <Grid xsOffset="auto" item>
+                <img src={Cru22} alt="Cru" className={classes.Cru22}/>
+              </Grid>
+              <Grid item marginLeft="0">
+                <img src={WCDrums} alt="me" className={classes.WCDrums}/>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
     </Grid>
+    </div>
   )
 
 };

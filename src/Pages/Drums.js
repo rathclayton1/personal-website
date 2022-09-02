@@ -1,7 +1,6 @@
 import React from 'react';
 import { LibraryMusic } from '@mui/icons-material';
 import { Box } from '@mui/material';
-import { Image, View, Dimensions } from 'react-native';
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
