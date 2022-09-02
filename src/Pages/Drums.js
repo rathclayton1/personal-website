@@ -26,7 +26,7 @@ export const Drums = () => {
         <Box>
         <LibraryMusic fontSize='large'/>
       
-                  <img src={require('../Images/Cru22.jpg')} alt="me" className={classes.Cru22}/>
+                  
                 
         </Box>
     );
