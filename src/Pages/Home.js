@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { makeStyles } from "@mui/styles"
-import { Box, Typography, Button, ImageList, ImageListItem, Unstable_Grid2 as Grid} from '@mui/material';
+import { styled, Typography, Button, ImageList, ImageListItem, Unstable_Grid2 as Grid} from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
 import { useSpring, animated } from 'react-spring';
 
@@ -12,8 +12,7 @@ const useStyles = makeStyles((theme) => ({
       height: "100%",
     width: "100%",
     zIndex: 1,
-    
-    }
+    },
 }))
 
 
@@ -21,9 +20,19 @@ const useStyles = makeStyles((theme) => ({
 
   const classes = useStyles();
 
+  const CoolButton = styled(Button)(() => ({
+    fontFamily: [
+      'Silkscreen',
+    ].join(','),
+    fontSize: 'large',
+    color: "black", 
+    marginLeft: "0.4em", 
+    marginTop: "1.5em"
+  }));
+
   const animate1 = useSpring( 
     {
-      from: {y: -100},
+      from: {y: -500},
       to: {y: 0}
     });
 
@@ -32,8 +41,17 @@ const useStyles = makeStyles((theme) => ({
       from: {y: 20000},
       to: {y: 15}
     });
+  
+  const animate3 = useSpring( 
+    {
+      from: {y: 40000},
+      to: {y: 0}
+    });
+  
 
   const AnimatedText = animated(Typography);
+  const AnimatedButton = animated(CoolButton);
+
   const itemData = [
     {
       img: 'https://github.com/rathclayton1/personal-website/blob/master/src/Images/WCD.png?raw=true',
@@ -90,10 +108,10 @@ const useStyles = makeStyles((theme) => ({
               My name is Clayton Rath. I am a native Wisconsinite with a passion for blah, blah, and blah. 
               I decided to create this full-stack website from the ground up to encapsulate those three interests (and maybe more), as well as to enhance my software development skills.
             </AnimatedText>
-            <Button size="large" style={{fontFamily: "Silkscreen", fontSize: "1.2em", color: "black", marginLeft: "0.4em", marginTop: "1.5em"}} variant="contained">
+            <AnimatedButton size="large" style={animate3} variant="contained">
               Check it out!
               <ArrowDropDown/>
-            </Button>
+            </AnimatedButton>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid container direction="row" spacing={0} xs={12} overflow="auto" disableEqualOverflow>
