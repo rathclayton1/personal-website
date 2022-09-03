@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 'large',
         width: "100%",
         height: "4.8em",
-        position: "relative",
+        position: "relative"
     },
     socials: {
         display: "flex",
