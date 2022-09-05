@@ -1,36 +1,21 @@
-import React from 'react';
-import { LibraryMusic } from '@mui/icons-material';
-import { Box } from '@mui/material';
+import React from "react";
+import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
-    WCDrums: {
-      flex: "1",
-      width: "500px",
-      height: "220px",
-      resizeMode: "contain"
-    },
-    Cru22: {
-      flex: "1",
-      height: "auto",
-      width: "auto",
-      resizeMode: "contain"
-    },
-}))
+ 
+}));
 
 export const Drums = () => {
+  const classes = useStyles();
 
-    const classes = useStyles();
-
-    return (
-        <Box>
-        <LibraryMusic fontSize='large'/>
-      
-                  
-                
-        </Box>
-    );
-
+  return (
+    <Box display="flex" justifyContent="center">
+      <Typography variant="h2" fontFamily="Silkscreen" margin="2em">
+      Coming Soon!
+      </Typography>
+    </Box>
+  );
 };
 
 export default Drums;
