@@ -28,7 +28,7 @@ export function DrawerComponent() {
         <List>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <CoolButton size="large" color="secondary" href="/devportfolio">
+              <CoolButton size="large" color="secondary" href="/portfolio">
                 Portfolio
               </CoolButton>
             </ListItemText>

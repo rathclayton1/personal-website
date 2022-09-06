@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import { makeStyles } from "@mui/styles";
 import {
   Box,
@@ -27,10 +27,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden", 
     display: "flex",
     justifyContent: "center"
-  }
+  },
 }));
 
-export const Home = () => {
+  export const Home = () => {
+  
   const classes = useStyles();
 
   const theme = useTheme();
@@ -122,7 +123,7 @@ export const Home = () => {
       <Grid
         container
         className={classes.contain}
-        spacing={0}
+        spacing={isSM ? 0 : 8}
         direction="column"
         overflow="hidden"
       >
@@ -188,7 +189,7 @@ export const Home = () => {
             spacing={0}
             justifyContent={isMD ? "center" : "undefined"}
             alignItems={isMD ? "center" : "undefined"}
-            marginTop="16rem"
+            marginTop="8rem"
           >
             <Grid item md={7} justify={isSM ? "center" : "undefined"}>
               <Typography
@@ -236,7 +237,7 @@ export const Home = () => {
               spacing={0}
               justifyContent="center"
               alignItems="center"
-              marginTop="9rem"
+              marginTop={isSM ? "6em" : undefined}
             >
               <Grid item md={12} justify="center">
                 <Typography
@@ -269,7 +270,7 @@ export const Home = () => {
                   src="https://github.com/rathclayton1/personal-website/blob/master/src/Images/HomeDrums.webp?raw=true"
                   marginLeft="2em"
                   width={isSM ? "355px" : "520px"}
-                  height={isSM ? "230px" : "310px"}
+                  height={isSM ? "205px" : "300px"}
                   alt="gif"
                 />
               </Grid>
@@ -280,18 +281,17 @@ export const Home = () => {
               container
               direction="row"
               spacing={0}
-              marginTop="9rem"
             >
-              <Grid md={5} item display="flex" justifyContent="center">
+              <Grid md={6} item display="flex" justifyContent="center">
                 <img
                   src="https://github.com/rathclayton1/personal-website/blob/master/src/Images/HomeDrums.webp?raw=true"
                   marginLeft="2em"
-                  width="550px"
-                  height="340px"
+                  width="576px"
+                  height="320px"
                   alt="drums"
                 />
               </Grid>
-              <Grid item md={2}/>
+              <Grid item md={1}/>
               <Grid item md={5}>
                 <Typography
                   fontWeight="bold"
@@ -317,6 +317,52 @@ export const Home = () => {
               </Grid>
             </Grid>
           )}
+        </Grid>
+        <Grid item>
+          <Grid
+            id="blog"
+            container
+            direction="row"
+            spacing={0}
+            justifyContent={isMD ? "center" : "undefined"}
+            alignItems={isMD ? "center" : "undefined"}
+            marginTop={isSM ? "6em" : undefined}
+            marginBottom={isSM ? "4em" : undefined}
+          >
+            <Grid item md={7} justify={isSM ? "center" : "undefined"}>
+              <Typography
+                fontWeight="bold"
+                variant={isSM ? "h5" : "h3"}
+                align={isMD ? "center" : "left"}
+                marginLeft={isSM ? "0.2em" : undefined}
+                fontFamily="Silkscreen"
+              >
+                Blog
+              </Typography>
+              <Typography
+                align={isMD ? "center" : "left"}
+                marginLeft="0.4rem"
+                marginTop="1em"
+                fontFamily="WorkSans"
+              >
+                A peek into my mind. Reflections on life, faith, and whatever else I feel like talking about.
+              </Typography>
+              <Box textAlign={isMD ? "center" : undefined}>
+                <CoolButton href="/blog" size="large" variant="contained">
+                  Blog
+                  <ArrowRight />
+                </CoolButton>
+              </Box>
+            </Grid>
+            <Grid item md={5} display="flex" justifyContent="center" marginTop={isMD ? "2em" : undefined} >
+              <img
+                src={"https://github.com/rathclayton1/personal-website/blob/master/src/Images/backpack.webp?raw=true"}
+                width={isSM ? "355px" : "518px"}
+                height={isSM ? "260px" : "388px"}
+                alt="backpack"
+              />
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>

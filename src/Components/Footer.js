@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { Typography, Box, Toolbar, Button, useMediaQuery } from "@mui/material";
+import { Typography, Box, AppBar, Button, useMediaQuery } from "@mui/material";
 import {
   Facebook,
   YouTube,
