@@ -85,7 +85,7 @@ export const Portfolio = () => {
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <object data="../Documents/resume.pdf" height="100%" width="100%">
+              <object data="/Documents/resume.pdf" height="100%" width="100%">
                 resume
               </object>
             </Box>
