@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Typography } from "@mui/material";
 
+document.title = "Blog";
+
 export const Blog = () => {
 
     return (

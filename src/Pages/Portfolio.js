@@ -65,6 +65,8 @@ export const Portfolio = () => {
     tech: ["C++", "Firestore", "GCP", "JavaScript", "HTML", "CSS"],
   };
 
+  document.title = "Portfolio";
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -93,7 +95,7 @@ export const Portfolio = () => {
           Some personal and collaborative projects that I have worked on. You can
           view my resume
           <Button
-            onClick={handleOpen}
+            href="https://pdfhost.io/v/9DxKiGt7z_Resume"
             style={{
               textTransform: "lowercase",
               fontFamily: "inherit",
@@ -102,6 +104,7 @@ export const Portfolio = () => {
               fontSize: "inherit",
             }}
             disableRipple
+            target="_blank"
           >
             here
           </Button>

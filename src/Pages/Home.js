@@ -75,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
   const AnimatedText = animated(Typography);
   const AnimatedButton = animated(CoolButton);
 
+  document.title = "Home";
+  
   const itemData = [
     {
       img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/WCD.webp?raw=true",

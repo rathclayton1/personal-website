@@ -6,8 +6,11 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
+
 export const Drums = () => {
   const classes = useStyles();
+
+  document.title = "Drums";
 
   return (
     <Box display="flex" justifyContent="center">
