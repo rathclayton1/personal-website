@@ -59,6 +59,7 @@ export default function Footer() {
           color="secondary"
           variant="h6"
           className={classes.copyright}
+          marginLeft="1em"
         >
             <small>
             &copy; Copyright 2022, Clayton Rath. All rights reserved

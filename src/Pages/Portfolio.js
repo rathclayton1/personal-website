@@ -15,8 +15,11 @@ import { fontSize } from "@mui/system";
 export const Portfolio = () => {
   const project1 = {
     title: "GeoApp",
-    repo: "https://www.github.com",
-    demo: "https://www.linkedin.com",
+    repo: "https://github.com/rathclayton1/GeoApp",
+    demo: {
+      type: "demo",
+      link: "https://www.linkedin.com"
+    },
     image:
       "https://github.com/rathclayton1/personal-website/blob/master/src/Images/GeoApp.png?raw=true",
     alt: "ProjImg",
@@ -24,16 +27,42 @@ export const Portfolio = () => {
       "A desktop application designed to efficiently keep track of and manipulate samples of rocks, minerals, and fossils for the UWO-Fox Cities Geology Department. Developed with 3 other students.",
     tech: ["C#", ".NET", "MySQL", "Github", "Jira"],
   };
+
   const project2 = {
     title: "Cafe Website",
-    repo: "https://www.github.com",
-    demo: "https://www.linkedin.com",
+    repo: "https://github.com/rathclayton1/CafeSite",
+    demo: {
+      type: "site",
+      link: "https://webdev.cs.uwosh.edu/students/rathc02/project/pages/home.php"
+    },
     image:
       "https://github.com/rathclayton1/personal-website/blob/master/src/Images/bean.png?raw=true",
     alt: "ProjImg",
     description:
       "A full-stack responsive website encapsulating a cafe. Includes account sessions, secure password hashing, and multiple validated database CRUD operations. Developed for initial web software development university class.",
-    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL", "Ajax"],
+    tech: ["HTML", "CSS", "PHP", "JavaScript", "Bootstrap", "MySQL", "Ajax"],
+  };
+
+  const project3 = {
+    title: "This Website",
+    repo: "https://github.com/rathclayton1/personal-website",
+    image:
+      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/site.PNG?raw=true",
+    alt: "ProjImg",
+    description:
+      "A full-stack, responsive personal website created for fun. More description coming soon once I finish it :D",
+    tech: ["React", "JavaScript", "CSS", "Some", "Database", "ThatI'llMake"],
+  };
+
+  const project4 = {
+    title: "IoT Bathroom Scheduler",
+    repo: "https://github.com/rathclayton1/IoTBathroomScheduler",
+    image:
+      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/IoT.png?raw=true",
+    alt: "ProjImg",
+    description:
+      "An IoT device consisting of two micro-controllers and a website, enabling users to seamlessly schedule bathroom appointments, see a schedule of roommates' appointments, view bathroom data (inUse, temperature, humidity), and more. Developed with 3 other students.",
+    tech: ["C++", "Firestore", "GCP", "JavaScript", "HTML", "CSS"],
   };
 
   const [open, setOpen] = useState(false);
@@ -45,6 +74,7 @@ export const Portfolio = () => {
   const isSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
+    <div display="flex">
     <Grid
       container
       direction="row"
@@ -52,13 +82,15 @@ export const Portfolio = () => {
       marginTop="1em"
       marginBottom="2em"
       display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
       <Grid item xs={12}>
         <Typography fontFamily="Silkscreen" variant="h2" textAlign="center">
           Projects
         </Typography>
         <Typography fontFamily="WorkSans" variant="h6" textAlign="center">
-          Some personal and collaborative projects I have worked on. You can
+          Some personal and collaborative projects that I have worked on. You can
           view my resume
           <Button
             onClick={handleOpen}
@@ -68,7 +100,6 @@ export const Portfolio = () => {
               fontWeight: "bold",
               color: "inherit",
               fontSize: "inherit",
-              marginBottom: "2.45px"
             }}
             disableRipple
           >
@@ -100,7 +131,7 @@ export const Portfolio = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <ProjectCard project={project1}></ProjectCard>
+        <ProjectCard project={project1} isDemo={true}></ProjectCard>
       </Grid>
       <Grid
         item
@@ -110,7 +141,7 @@ export const Portfolio = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <ProjectCard project={project2}></ProjectCard>
+        <ProjectCard project={project2} isDemo={true}></ProjectCard>
       </Grid>
       <Grid
         item
@@ -120,7 +151,7 @@ export const Portfolio = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <ProjectCard project={project1}></ProjectCard>
+        <ProjectCard project={project3} isDemo={false}></ProjectCard>
       </Grid>
       <Grid
         item
@@ -130,9 +161,10 @@ export const Portfolio = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <ProjectCard project={project1}></ProjectCard>
+        <ProjectCard project={project4} isDemo={false}></ProjectCard>
       </Grid>
     </Grid>
+    </div>
   );
 };
 export default Portfolio;

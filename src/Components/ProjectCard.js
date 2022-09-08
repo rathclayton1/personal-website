@@ -29,7 +29,7 @@ const CoolButton = styled(Button)(() => ({
   color: "black",
 }));
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project, isDemo }) => {
   const classes = useStyles();
 
   return (
@@ -40,9 +40,11 @@ export const ProjectCard = ({ project }) => {
             <Button color="secondary" target="_blank" href={project.repo}>
               <GitHub />
             </Button>
-            <CoolButton href={project.demo} target="_blank">
-              Demo
+            {isDemo ? (
+            <CoolButton href={project.demo.link} target="_blank">
+              {project.demo.type}
             </CoolButton>
+            ) : <></>}
           </Box>
         }
         title={
