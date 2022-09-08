@@ -108,7 +108,7 @@ export const Portfolio = () => {
           <Modal open={open} onClose={handleClose}>
             <Box
               height="85%"
-              width="75%"
+              width="85%"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -116,7 +116,7 @@ export const Portfolio = () => {
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <object data={Resume} height="100%" width="100%">
+              <object data="/Documents/resume.pdf" height="100%" width="100%">
                 resume
               </object>
             </Box>
