@@ -6,6 +6,7 @@ import {
   Typography,
   Grid,
   useMediaQuery,
+  Link
 } from "@mui/material";
 import ProjectCard from "../Components/ProjectCard";
 import { useTheme } from "@emotion/react";
@@ -93,9 +94,10 @@ export const Portfolio = () => {
         </Typography>
         <Typography fontFamily="WorkSans" variant="h6" textAlign="center">
           Some personal and collaborative projects that I have worked on. You can
-          view my resume
-          <Button
-            href="https://pdfhost.io/v/9DxKiGt7z_Resume"
+          view my resume {}
+          <Link
+            underline="none"
+            onClick={handleOpen}
             style={{
               textTransform: "lowercase",
               fontFamily: "inherit",
@@ -103,11 +105,13 @@ export const Portfolio = () => {
               color: "inherit",
               fontSize: "inherit",
             }}
-            disableRipple
-            target="_blank"
+            sx={{ ':hover': {
+              cursor: "pointer",
+              textDecoration: "underline"
+          }}}
           >
             here
-          </Button>
+          </Link>
           <Modal open={open} onClose={handleClose}>
             <Box
               height="85%"
@@ -119,7 +123,7 @@ export const Portfolio = () => {
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <object data="/Documents/resume.pdf" height="100%" width="100%">
+              <object data={Resume} height="100%" width="100%">
                 resume
               </object>
             </Box>
