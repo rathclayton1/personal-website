@@ -15,6 +15,18 @@ import { useSpring, animated } from "react-spring";
 import { useTheme } from "@emotion/react";
 import gif from "../Images/claytonWebsite.gif";
 import { Scrollchor } from "react-scrollchor";
+import Drums from "../Images/WCD.webp";
+import SM from "../Images/SM.webp";
+import Tristan from "../Images/Tristan.webp";
+import Cru from "../Images/Cru22M.webp";
+import Audrie from "../Images/AudrieM.webp";
+import Vacuum from "../Images/vacuum.webp";
+import Dad from "../Images/dad.webp";
+import Stnw from "../Images/STNW_.webp";
+import Backpack from "../Images/backpack.webp";
+import Drums2 from "../Images/HomeDrums.webp";
+
+
 
 const useStyles = makeStyles((theme) => ({
   contain: {
@@ -76,46 +88,46 @@ const useStyles = makeStyles((theme) => ({
   const AnimatedButton = animated(CoolButton);
 
   document.title = "Home";
-  
+
   const itemData = [
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/WCD.webp?raw=true",
+      img: Drums,
       title: "drums",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/SM.webp?raw=true",
+      img: SM,
       title: "sm",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/Tristan.webp?raw=true",
+      img: Tristan,
       title: "tristan",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/Cru22M.webp?raw=true",
+      img: Cru,
       title: "cru22",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/AudrieM.webp?raw=true",
+      img: Audrie,
       title: "audrie",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/vacuum.webp?raw=trMue",
+      img: Vacuum,
       title: "vacuum",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/dad.webp?raw=true",
+      img: Dad,
       title: "dad",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/STNW_.webp?raw=true",
+      img: Stnw,
       title: "stnw",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/HomeDrums.webp?raw=true",
+      img: Drums2,
       title: "drums2",
     },
     {
-      img: "https://github.com/rathclayton1/personal-website/blob/master/src/Images/backpack.webp?raw=true",
+      img: Backpack,
       title: "backpack",
     },
   ];
@@ -269,7 +281,7 @@ const useStyles = makeStyles((theme) => ({
               </Grid>
               <Grid md={12} item >
                 <img
-                  src="https://github.com/rathclayton1/personal-website/blob/master/src/Images/HomeDrums.webp?raw=true"
+                  src={Drums2}
                   marginLeft="2em"
                   width={isSM ? "355px" : "520px"}
                   height={isSM ? "205px" : "300px"}
@@ -286,7 +298,7 @@ const useStyles = makeStyles((theme) => ({
             >
               <Grid md={6} item display="flex" justifyContent="center">
                 <img
-                  src="https://github.com/rathclayton1/personal-website/blob/master/src/Images/HomeDrums.webp?raw=true"
+                  src={Drums2}
                   marginLeft="2em"
                   width="576px"
                   height="320px"
@@ -358,7 +370,7 @@ const useStyles = makeStyles((theme) => ({
             </Grid>
             <Grid item md={5} display="flex" justifyContent="center" marginTop={isMD ? "2em" : undefined} >
               <img
-                src={"https://github.com/rathclayton1/personal-website/blob/master/src/Images/backpack.webp?raw=true"}
+                src={Backpack}
                 width={isSM ? "355px" : "518px"}
                 height={isSM ? "260px" : "388px"}
                 alt="backpack"

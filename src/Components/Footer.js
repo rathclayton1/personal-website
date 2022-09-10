@@ -75,6 +75,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://www.youtube.com/channel/UCw1cE68NdT3nT1f815aqWUg"
+            sx={{ ':hover': {
+              color: '#ff0000',
+          }}}
           >
             <YouTube fontSize="large" />
           </Button>
@@ -83,6 +86,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://www.linkedin.com/in/clayton-rath"
+            sx={{ ':hover': {
+              color: '#0072b1',
+          }}}
           >
             <LinkedIn fontSize="large" />
           </Button>
@@ -91,6 +97,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://github.com/rathclayton1"
+            sx={{ ':hover': {
+              color: '#8531a6',
+          }}}
           >
             <GitHub fontSize="large" />
           </Button>
@@ -99,6 +108,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://www.instagram.com/feel_myrath/"
+            sx={{ ':hover': {
+              color: '#cd486b',
+          }}}
           >
             <Instagram fontSize="large" />
           </Button>
@@ -107,6 +119,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://mobile.twitter.com/manoink10123"
+            sx={{ ':hover': {
+              color: '#00acee',
+          }}}
           >
             <Twitter fontSize="large" />
           </Button>
@@ -115,6 +130,9 @@ export default function Footer() {
             color="secondary"
             target="_blank"
             href="https://www.facebook.com/profile.php?id=100010101031341"
+            sx={{ ':hover': {
+              color: '#0777e9',
+          }}}
           >
             <Facebook fontSize="large" />
           </Button>
