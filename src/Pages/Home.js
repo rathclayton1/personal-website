@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     overflow: "hidden", 
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 }));
 
@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const isXL = useMediaQuery(theme.breakpoints.down("xl"));
+
 
   const CoolButton = styled(Button)(() => ({
     fontFamily: ["Silkscreen"].join(","),
@@ -132,6 +133,7 @@ const useStyles = makeStyles((theme) => ({
     },
   ];
 
+
   return (
     <div className={classes.container}>
       <Grid
@@ -179,7 +181,7 @@ const useStyles = makeStyles((theme) => ({
                 </Scrollchor>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6} >
+            <Grid item xs={12} md={6}>
                 <ImageList variant="masonry" cols={3} gap={12}>
                   {itemData.map((item) => (
                     <ImageListItem key={item.img}>

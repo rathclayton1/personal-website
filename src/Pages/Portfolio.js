@@ -12,6 +12,10 @@ import ProjectCard from "../Components/ProjectCard";
 import { useTheme } from "@emotion/react";
 import Resume from "../Documents/resume.pdf";
 import { fontSize } from "@mui/system";
+import GeoApp from "../Images/GeoApp.png";
+import Cafe from "../Images/bean.png";
+import Site from "../Images/site.PNG";
+import IoT from "../Images/IoT.png";
 
 export const Portfolio = () => {
   const project1 = {
@@ -19,10 +23,9 @@ export const Portfolio = () => {
     repo: "https://github.com/rathclayton1/GeoApp",
     demo: {
       type: "demo",
-      link: "https://www.linkedin.com"
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:6892920934198497280/"
     },
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/GeoApp.png?raw=true",
+    image: `${GeoApp}`,
     alt: "ProjImg",
     description:
       "A desktop application designed to efficiently keep track of and manipulate samples of rocks, minerals, and fossils for the UWO-Fox Cities Geology Department. Developed with 3 other students.",
@@ -36,8 +39,7 @@ export const Portfolio = () => {
       type: "site",
       link: "https://webdev.cs.uwosh.edu/students/rathc02/project/pages/home.php"
     },
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/bean.png?raw=true",
+    image: `${Cafe}`,
     alt: "ProjImg",
     description:
       "A full-stack responsive website encapsulating a cafe. Includes account sessions, secure password hashing, and multiple validated database CRUD operations. Developed for initial web software development university class.",
@@ -47,8 +49,7 @@ export const Portfolio = () => {
   const project3 = {
     title: "This Website",
     repo: "https://github.com/rathclayton1/personal-website",
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/site.PNG?raw=true",
+    image: `${Site}`,
     alt: "ProjImg",
     description:
       "A full-stack, responsive personal website created for fun. More description coming soon once I finish it :D",
@@ -58,8 +59,7 @@ export const Portfolio = () => {
   const project4 = {
     title: "IoT Bathroom Scheduler",
     repo: "https://github.com/rathclayton1/IoTBathroomScheduler",
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/IoT.png?raw=true",
+    image: `${IoT}`,
     alt: "ProjImg",
     description:
       "An IoT device consisting of two micro-controllers and a website, enabling users to seamlessly schedule bathroom appointments, see a schedule of roommates' appointments, view bathroom data (inUse, temperature, humidity), and more. Developed with 3 other students.",
