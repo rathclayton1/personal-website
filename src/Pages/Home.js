@@ -160,11 +160,9 @@ const useStyles = makeStyles((theme) => ({
                 align={isMD ? "center" : "left"}
                 style={animate2}
               >
-                My name is Clayton Rath. I am a native Wisconsinite with a
-                passion for blah, blah, and blah. I decided to create this
-                full-stack website from the ground up to encapsulate those three
-                interests (and maybe more), as well as to enhance my software
-                development skills.
+                My name is Clayton Rath. I am a native Wisconsinite and recent graduate.
+                I decided to create this full-stack website from the ground up to encapsulate some of my
+                interests, as well as to enhance my software development skills.
               </AnimatedText>
               <Box textAlign={isMD ? "center" : undefined}>
                 <Scrollchor to="#software" style={{ textDecoration: "none" }}>
@@ -221,8 +219,8 @@ const useStyles = makeStyles((theme) => ({
                 marginTop="1em"
                 fontFamily="WorkSans"
               >
-                Something cool about software development here. Something about
-                how I have a Bachelor's of Science in Computer Science from
+                Since taking an intro to programming class in high school, software development has 
+                played a major role in my life, leading me to attain a Bachelor's of Science in Computer Science from
                 UW-Oshkosh. Check out some of my work!
               </Typography>
               <Box textAlign={isMD ? "center" : undefined}>
@@ -269,8 +267,8 @@ const useStyles = makeStyles((theme) => ({
                   marginTop="1em"
                   fontFamily="WorkSans"
                 >
-                  Something neat about drums here. I bang things with sticks and
-                  it makes some noise.
+                  Put simply, I love the drums. Playing them, listening to them, recording them, 
+                  tuning them, whatever. Who knew banging things with sticks could be so much fun.
                 </Typography>
                 <Box textAlign="center" marginBottom="2em">
                   <CoolButton href="/drums" size="large" variant="contained">
@@ -319,8 +317,8 @@ const useStyles = makeStyles((theme) => ({
                   marginTop="1em"
                   fontFamily="WorkSans"
                 >
-                  Something neat about drums here. I bang things with sticks and
-                  it makes some noise.
+                  Put simply, I love the drums. Playing them, listening to them, recording them, 
+                  tuning them, whatever. Who knew banging things with sticks could be so much fun.
                 </Typography>
                 <Box>
                   <CoolButton href="/drums" size="large" variant="contained">

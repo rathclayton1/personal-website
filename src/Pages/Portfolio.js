@@ -19,7 +19,7 @@ export const Portfolio = () => {
     repo: "https://github.com/rathclayton1/GeoApp",
     demo: {
       type: "demo",
-      link: "https://www.linkedin.com"
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:6892920934198497280/"
     },
     image:
       "https://github.com/rathclayton1/personal-website/blob/master/src/Images/GeoApp.png?raw=true",
