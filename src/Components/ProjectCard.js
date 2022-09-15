@@ -37,14 +37,25 @@ export const ProjectCard = ({ project, isDemo }) => {
       <CardHeader
         action={
           <Box>
-            <Button color="secondary" target="_blank" href={project.repo}>
+            <Button
+              color="secondary"
+              sx={{
+                ":hover": {
+                  color: "#8531a6",
+                },
+              }}
+              target="_blank"
+              href={project.repo}
+            >
               <GitHub />
             </Button>
             {isDemo ? (
-            <CoolButton href={project.demo.link} target="_blank">
-              {project.demo.type}
-            </CoolButton>
-            ) : <></>}
+              <CoolButton href={project.demo.link} target="_blank">
+                {project.demo.type}
+              </CoolButton>
+            ) : (
+              <></>
+            )}
           </Box>
         }
         title={
@@ -60,11 +71,16 @@ export const ProjectCard = ({ project, isDemo }) => {
         alt={project.alt}
       />
       <CardContent>
-        <Typography variant="body2" fontFamily="WorkSans" color="secondary" marginBottom="1em">
+        <Typography
+          variant="body2"
+          fontFamily="WorkSans"
+          color="secondary"
+          marginBottom="1em"
+        >
           {project.description}
         </Typography>
         {project.tech.map((item) => (
-            <Chip label={item} variant="outlined"/>
+          <Chip label={item} variant="outlined" />
         ))}
       </CardContent>
     </Card>

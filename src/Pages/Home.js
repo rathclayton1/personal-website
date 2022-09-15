@@ -26,24 +26,21 @@ import Stnw from "../Images/STNW_.webp";
 import Backpack from "../Images/backpack.webp";
 import Drums2 from "../Images/HomeDrums.webp";
 
-
-
 const useStyles = makeStyles((theme) => ({
   contain: {
     padding: theme.spacing(0, 1),
     overflowY: "hidden",
     overflowX: "hidden",
-    maxWidth: "2000px"
+    maxWidth: "2000px",
   },
   container: {
-    overflow: "hidden", 
+    overflow: "hidden",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 }));
 
-  export const Home = () => {
-  
+export const Home = () => {
   const classes = useStyles();
 
   const theme = useTheme();
@@ -160,9 +157,10 @@ const useStyles = makeStyles((theme) => ({
                 align={isMD ? "center" : "left"}
                 style={animate2}
               >
-                My name is Clayton Rath. I am a native Wisconsinite and recent graduate.
-                I decided to create this full-stack website from the ground up to encapsulate some of my
-                interests, as well as to enhance my software development skills.
+                My name is Clayton Rath. I am a native Wisconsinite and recent
+                graduate. I decided to create this full-stack website from the
+                ground up to encapsulate some of my interests, as well as to
+                enhance my software development skills.
               </AnimatedText>
               <Box textAlign={isMD ? "center" : undefined}>
                 <Scrollchor to="#software" style={{ textDecoration: "none" }}>
@@ -177,19 +175,19 @@ const useStyles = makeStyles((theme) => ({
                 </Scrollchor>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6} >
-                <ImageList variant="masonry" cols={3} gap={12}>
-                  {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
-                      <img
-                        src={`${item.img}`}
-                        srcSet={`${item.img}`}
-                        alt={item.title}
-                        loading="eager"
-                      />
-                    </ImageListItem>
-                  ))}
-                </ImageList>
+            <Grid item xs={12} md={6}>
+              <ImageList variant="masonry" cols={3} gap={12}>
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      src={`${item.img}`}
+                      srcSet={`${item.img}`}
+                      alt={item.title}
+                      loading="eager"
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
             </Grid>
           </Grid>
         </Grid>
@@ -219,8 +217,9 @@ const useStyles = makeStyles((theme) => ({
                 marginTop="1em"
                 fontFamily="WorkSans"
               >
-                Since taking an intro to programming class in high school, software development has 
-                played a major role in my life, leading me to attain a Bachelor's of Science in Computer Science from
+                Since taking an intro to programming class in high school,
+                software development has played a major role in my life, leading
+                me to attain a Bachelor's of Science in Computer Science from
                 UW-Oshkosh. Check out some of my work!
               </Typography>
               <Box textAlign={isMD ? "center" : undefined}>
@@ -230,7 +229,13 @@ const useStyles = makeStyles((theme) => ({
                 </CoolButton>
               </Box>
             </Grid>
-            <Grid item md={5} display="flex" justifyContent="center" marginTop={isMD ? "2em" : undefined} >
+            <Grid
+              item
+              md={5}
+              display="flex"
+              justifyContent="center"
+              marginTop={isMD ? "2em" : undefined}
+            >
               <img
                 src={gif}
                 width={isSM ? "355px" : "510px"}
@@ -267,8 +272,9 @@ const useStyles = makeStyles((theme) => ({
                   marginTop="1em"
                   fontFamily="WorkSans"
                 >
-                  Put simply, I love the drums. Playing them, listening to them, recording them, 
-                  tuning them, whatever. Who knew banging things with sticks could be so much fun.
+                  Put simply, I love the drums. Playing them, listening to them,
+                  recording them, tuning them, whatever. Who knew banging things
+                  with sticks could be so much fun.
                 </Typography>
                 <Box textAlign="center" marginBottom="2em">
                   <CoolButton href="/drums" size="large" variant="contained">
@@ -277,7 +283,7 @@ const useStyles = makeStyles((theme) => ({
                   </CoolButton>
                 </Box>
               </Grid>
-              <Grid md={12} item >
+              <Grid md={12} item>
                 <img
                   src={Drums2}
                   marginLeft="2em"
@@ -288,12 +294,7 @@ const useStyles = makeStyles((theme) => ({
               </Grid>
             </Grid>
           ) : (
-            <Grid
-              id="drums"
-              container
-              direction="row"
-              spacing={0}
-            >
+            <Grid id="drums" container direction="row" spacing={0}>
               <Grid md={6} item display="flex" justifyContent="center">
                 <img
                   src={Drums2}
@@ -303,7 +304,7 @@ const useStyles = makeStyles((theme) => ({
                   alt="drums"
                 />
               </Grid>
-              <Grid item md={1}/>
+              <Grid item md={1} />
               <Grid item md={5}>
                 <Typography
                   fontWeight="bold"
@@ -317,8 +318,9 @@ const useStyles = makeStyles((theme) => ({
                   marginTop="1em"
                   fontFamily="WorkSans"
                 >
-                  Put simply, I love the drums. Playing them, listening to them, recording them, 
-                  tuning them, whatever. Who knew banging things with sticks could be so much fun.
+                  Put simply, I love the drums. Playing them, listening to them,
+                  recording them, tuning them, whatever. Who knew banging things
+                  with sticks could be so much fun.
                 </Typography>
                 <Box>
                   <CoolButton href="/drums" size="large" variant="contained">
@@ -357,7 +359,8 @@ const useStyles = makeStyles((theme) => ({
                 marginTop="1em"
                 fontFamily="WorkSans"
               >
-                A peek into my mind. Reflections on life, faith, and whatever else I feel like talking about.
+                A peek into my mind. Reflections on life, faith, and whatever
+                else I feel like talking about.
               </Typography>
               <Box textAlign={isMD ? "center" : undefined}>
                 <CoolButton href="/blog" size="large" variant="contained">
@@ -366,7 +369,13 @@ const useStyles = makeStyles((theme) => ({
                 </CoolButton>
               </Box>
             </Grid>
-            <Grid item md={5} display="flex" justifyContent="center" marginTop={isMD ? "2em" : undefined} >
+            <Grid
+              item
+              md={5}
+              display="flex"
+              justifyContent="center"
+              marginTop={isMD ? "2em" : undefined}
+            >
               <img
                 src={Backpack}
                 width={isSM ? "355px" : "518px"}

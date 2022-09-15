@@ -6,12 +6,15 @@ import {
   Typography,
   Grid,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import ProjectCard from "../Components/ProjectCard";
 import { useTheme } from "@emotion/react";
 import Resume from "../Documents/resume.pdf";
-import { fontSize } from "@mui/system";
+import GeoApp from "../Images/GeoApp.png";
+import IoT from "../Images/IoT.png";
+import Site from "../Images/site.PNG";
+import Bean from "../Images/bean.png";
 
 export const Portfolio = () => {
   const project1 = {
@@ -19,10 +22,9 @@ export const Portfolio = () => {
     repo: "https://github.com/rathclayton1/GeoApp",
     demo: {
       type: "demo",
-      link: "https://www.linkedin.com/feed/update/urn:li:activity:6892920934198497280/"
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:6892920934198497280/",
     },
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/GeoApp.png?raw=true",
+    image: GeoApp,
     alt: "ProjImg",
     description:
       "A desktop application designed to efficiently keep track of and manipulate samples of rocks, minerals, and fossils for the UWO-Fox Cities Geology Department. Developed with 3 other students.",
@@ -34,10 +36,9 @@ export const Portfolio = () => {
     repo: "https://github.com/rathclayton1/CafeSite",
     demo: {
       type: "site",
-      link: "https://webdev.cs.uwosh.edu/students/rathc02/project/pages/home.php"
+      link: "https://webdev.cs.uwosh.edu/students/rathc02/project/pages/home.php",
     },
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/bean.png?raw=true",
+    image: Bean,
     alt: "ProjImg",
     description:
       "A full-stack responsive website encapsulating a cafe. Includes account sessions, secure password hashing, and multiple validated database CRUD operations. Developed for initial web software development university class.",
@@ -47,8 +48,7 @@ export const Portfolio = () => {
   const project3 = {
     title: "This Website",
     repo: "https://github.com/rathclayton1/personal-website",
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/site.PNG?raw=true",
+    image: Site,
     alt: "ProjImg",
     description:
       "A full-stack, responsive personal website created for fun. More description coming soon once I finish it :D",
@@ -58,8 +58,7 @@ export const Portfolio = () => {
   const project4 = {
     title: "IoT Bathroom Scheduler",
     repo: "https://github.com/rathclayton1/IoTBathroomScheduler",
-    image:
-      "https://github.com/rathclayton1/personal-website/blob/master/src/Images/IoT.png?raw=true",
+    image: IoT,
     alt: "ProjImg",
     description:
       "An IoT device consisting of two micro-controllers and a website, enabling users to seamlessly schedule bathroom appointments, see a schedule of roommates' appointments, view bathroom data (inUse, temperature, humidity), and more. Developed with 3 other students.",
@@ -78,99 +77,101 @@ export const Portfolio = () => {
 
   return (
     <div display="flex">
-    <Grid
-      container
-      direction="row"
-      spacing={3}
-      marginTop="1em"
-      marginBottom="2em"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Grid item xs={12}>
-        <Typography fontFamily="Silkscreen" variant="h2" textAlign="center">
-          Projects
-        </Typography>
-        <Typography fontFamily="WorkSans" variant="h6" textAlign="center">
-          Some personal and collaborative projects that I have worked on. You can
-          view my resume {}
-          <Link
-            underline="none"
-            onClick={handleOpen}
-            style={{
-              textTransform: "lowercase",
-              fontFamily: "inherit",
-              fontWeight: "bold",
-              color: "inherit",
-              fontSize: "inherit",
-            }}
-            sx={{ ':hover': {
-              cursor: "pointer",
-              textDecoration: "underline"
-          }}}
-          >
-            here
-          </Link>
-          <Modal open={open} onClose={handleClose}>
-            <Box
-              height="85%"
-              width="85%"
+      <Grid
+        container
+        direction="row"
+        spacing={3}
+        marginTop="1em"
+        marginBottom="2em"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={12}>
+          <Typography fontFamily="Silkscreen" variant="h2" textAlign="center">
+            Projects
+          </Typography>
+          <Typography fontFamily="WorkSans" variant="h6" textAlign="center">
+            Some personal and collaborative projects that I have worked on. You
+            can view my resume {}
+            <Link
+              underline="none"
+              onClick={handleOpen}
               style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
+                textTransform: "lowercase",
+                fontFamily: "inherit",
+                fontWeight: "bold",
+                color: "inherit",
+                fontSize: "inherit",
+              }}
+              sx={{
+                ":hover": {
+                  cursor: "pointer",
+                  textDecoration: "underline",
+                },
               }}
             >
-              <object data={Resume} height="100%" width="100%">
-                resume
-              </object>
-            </Box>
-          </Modal>
-        </Typography>
+              here
+            </Link>
+            <Modal open={open} onClose={handleClose}>
+              <Box
+                height="85%"
+                width="85%"
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <object data={Resume} height="100%" width="100%">
+                  resume
+                </object>
+              </Box>
+            </Modal>
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <ProjectCard project={project1} isDemo={true}></ProjectCard>
+        </Grid>
+        <Grid
+          item
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <ProjectCard project={project2} isDemo={true}></ProjectCard>
+        </Grid>
+        <Grid
+          item
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <ProjectCard project={project3} isDemo={false}></ProjectCard>
+        </Grid>
+        <Grid
+          item
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <ProjectCard project={project4} isDemo={false}></ProjectCard>
+        </Grid>
       </Grid>
-      <Grid
-        item
-        md={6}
-        sm={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <ProjectCard project={project1} isDemo={true}></ProjectCard>
-      </Grid>
-      <Grid
-        item
-        md={6}
-        sm={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <ProjectCard project={project2} isDemo={true}></ProjectCard>
-      </Grid>
-      <Grid
-        item
-        md={6}
-        sm={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <ProjectCard project={project3} isDemo={false}></ProjectCard>
-      </Grid>
-      <Grid
-        item
-        md={6}
-        sm={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <ProjectCard project={project4} isDemo={false}></ProjectCard>
-      </Grid>
-    </Grid>
     </div>
   );
 };
