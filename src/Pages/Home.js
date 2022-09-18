@@ -40,6 +40,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+export const CoolButton = styled(Button)(() => ({
+  fontFamily: ["Silkscreen"].join(","),
+  fontSize: "large",
+  color: "black",
+  marginLeft: "0.4em",
+  marginTop: "2em",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
 export const Home = () => {
   const classes = useStyles();
 
@@ -52,16 +62,6 @@ export const Home = () => {
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const isXL = useMediaQuery(theme.breakpoints.down("xl"));
-
-  const CoolButton = styled(Button)(() => ({
-    fontFamily: ["Silkscreen"].join(","),
-    fontSize: "large",
-    color: "black",
-    marginLeft: "0.4em",
-    marginTop: "2em",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
 
   const animate1 = useSpring({
     from: { y: -500 },

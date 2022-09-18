@@ -9,9 +9,9 @@ import {
   ListItemText,
   Paper,
   ListItemIcon,
-  IconButton
+  IconButton,
 } from "@mui/material";
-import { PlayCircle } from "@mui/icons-material";
+import { PlayCircle, ArrowRight } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 import { useTheme } from "@emotion/react";
 import DrumVid from "../Images/DrumVid.mp4";
@@ -27,7 +27,7 @@ import Daniel from "../Images/daniel1.jpeg";
 import Lips from "../Images/lips.jpeg";
 import Pilot from "../Images/pilot.png";
 import Church from "../Images/church.jpeg";
-import Papa from "papaparse";
+import { CoolButton } from "../Pages/Home";
 
 const useStyles = makeStyles((theme) => ({
   video: {
@@ -118,9 +118,11 @@ export const Drums = () => {
         overflowY="hidden"
         overflowX="hidden"
         spacing={8}
+        justifyContent="center"
+        align="center"
       >
         <Grid item>
-          <video autoPlay playsinline loop muted className={classes.video}>
+          <video autoPlay playsInLine loop muted className={classes.video}>
             <source src={DrumVid} type="video/mp4" />
           </video>
           <Box display="flex" justifyContent="center">
@@ -137,33 +139,66 @@ export const Drums = () => {
           </Box>
         </Grid>
         <Grid item>
+          <Grid item md={6} marginTop="20em">
+            <Typography
+              variant={isSM ? "h4" : "h3"}
+              align="center"
+              fontFamily="Silkscreen"
+            >
+              Recent videos
+            </Typography>
+          </Grid>
           <Grid
             container
             direction="row"
-            marginTop="18em"
+            marginTop={isSM ? "1em" : "4em"}
             display="flex"
             justifyContent="center"
             alignItems="center"
-            spacing={isSM ? 5 : 0}
+            spacing={isSM ? 5 : -12}
           >
-            <Grid item md={6} justifyContent="center">
-              <Typography
-                variant={isSM ? "h4" : "h3"}
-                align="center"
-                fontFamily="Silkscreen"
-              >
-                Latest YouTube video
-              </Typography>
+            <Grid item sm={12} md={6}>
+              <iframe
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                src="https://www.youtube.com/embed/sJb80P9rpto"
+                title="latestVid"
+                width={isSM ? "390px" : "630px"}
+                height={isSM ? "220px" : "354px"}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <iframe
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                src="https://www.youtube.com/embed/5rGrKL1ypQY"
+                title="latestVid"
+                width={isSM ? "390px" : "630px"}
+                height={isSM ? "220px" : "354px"}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <iframe
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                src="https://www.youtube.com/embed/IiKzRqqwB1k"
+                title="latestVid"
+                width={isSM ? "390px" : "630px"}
+                height={isSM ? "220px" : "354px"}
+              />
             </Grid>
             <Grid item md={6}>
               <iframe
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UUw1cE68NdT3nT1f815aqWUg"
+                src="https://www.youtube.com/embed/Kvfh9yRVyN4"
                 title="latestVid"
-                width={isSM ? "390px" : "700px"}
-                height={isSM ? "220px" : "394px"}
+                width={isSM ? "390px" : "630px"}
+                height={isSM ? "220px" : "354px"}
               />
             </Grid>
           </Grid>
@@ -233,41 +268,95 @@ export const Drums = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item justifyContent="center" align="center" xs={12}>
-          <Typography variant={isSM ? "h3" : "h2"} fontFamily="Silkscreen">
-            What I'm listening to
-          </Typography>
+        <Grid item>
+          <Grid container direction="row">
+            <Grid
+              item
+              xs={12}
+              md={5}
+              marginTop="4em"
+              justifyContent={isMD ? "center" : "left"}
+              align={isMD ? "center" : "left"}
+            >
+              <Typography
+                variant={isSM ? "h4" : "h2"}
+                fontFamily="Silkscreen"
+              >
+                Need Drums?
+              </Typography>
+              <Typography
+                fontFamily="workSans"
+                variant={isSM ? "h6" : "h5"}
+                marginTop="1.5em"
+                marginLeft=".25em"
+              >
+                Need a groove laid down for a song? Wanna collab on a cover?
+                Just craving some blast beats?
+              </Typography>
+              <CoolButton href="/contact" size="large" variant="contained">
+                Hit me up!
+                <ArrowRight />
+              </CoolButton>
+            </Grid>
+            <Grid item xs={12} md={6} marginLeft="auto">
+              <Grid
+                container
+                justifyContent="center"
+                align="center"
+                spacing={0}
+                marginTop="4em"
+              >
+                <Grid item justifyContent="center" align="center">
+                  <Typography
+                    variant={isSM ? "h4" : "h2"}
+                    fontFamily="Silkscreen"
+                    marginBottom="0px"
+                  >
+                    What I'm jamming
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Paper
+                    elevation={8}
+                    style={{
+                      maxHeight: 400,
+                      maxWidth: 600,
+                      overflow: "auto",
+                      backgroundColor: "#eff7fa",
+                    }}
+                  >
+                    <List dense>
+                      {songs.map((item) => (
+                        <ListItem
+                          secondaryAction={
+                            <IconButton edge="end" href={item.track.uri}>
+                              <PlayCircle fontSize="large" />
+                            </IconButton>
+                          }
+                        >
+                          <ListItemIcon>
+                            <img
+                              src={item.track.album.images[0].url}
+                              alt="cover"
+                              width="40px"
+                            />
+                          </ListItemIcon>
+                          <ListItemText
+                            primary={item.track.name}
+                            secondary={item.track.artists[0].name}
+                            fontFamily="WorkSans"
+                            variant={isSM ? "h6" : "h5"}
+                          />
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Paper>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item justifyContent="center" align="center">
-          <Paper elevation={8} style={{ maxHeight: 400, maxWidth: 600, overflow: "auto", backgroundColor: "#eff7fa" }}>
-            <List dense>
-              {songs.map((item) => (
-                <ListItem
-                  secondaryAction={
-                    <IconButton edge="end" href={item.track.uri}>
-                      <PlayCircle fontSize="large" />
-                    </IconButton>
-                  }
-                >
-                  <ListItemIcon>
-                    <img
-                      src={item.track.album.images[0].url}
-                      alt="cover"
-                      width="40px"
-                    />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={item.track.name}
-                    secondary={item.track.artists[0].name}
-                    fontFamily="WorkSans"
-                    variant={isSM ? "h6" : "h5"}
-                  />
-                </ListItem>
-              ))}
-            </List>
-          </Paper>
-        </Grid>
-        <Grid item justifyContent="center" align="center">
+        <Grid item>
           <Typography variant={isSM ? "h2" : "h1"} fontFamily="Silkscreen">
             Gear I use
           </Typography>
