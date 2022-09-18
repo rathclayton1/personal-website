@@ -98,7 +98,7 @@ export default function Footer() {
             target="_blank"
             href="https://github.com/rathclayton1"
             sx={{ ':hover': {
-              color: '#8531a6',
+              color: '#6e5494',
           }}}
           >
             <GitHub fontSize="large" />
@@ -131,7 +131,7 @@ export default function Footer() {
             target="_blank"
             href="https://www.facebook.com/profile.php?id=100010101031341"
             sx={{ ':hover': {
-              color: '#0777e9',
+              color: '#4267B2',
           }}}
           >
             <Facebook fontSize="large" />
