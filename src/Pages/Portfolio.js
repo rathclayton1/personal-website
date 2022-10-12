@@ -51,7 +51,7 @@ export const Portfolio = () => {
     image: Site,
     alt: "ProjImg",
     description:
-      "A full-stack, responsive personal website created for fun. Integrations with API's, my email, and more once I finish it :D",
+      "A full-stack, responsive personal website created for fun. Integrations with API's, my email, and more once I finish it :D. Deployed with Google Domains and AWS.",
     tech: ["React", "JavaScript", "CSS", "Some", "Database", "ThatI'llMake"],
   };
 
