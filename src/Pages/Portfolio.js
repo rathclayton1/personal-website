@@ -41,7 +41,7 @@ export const Portfolio = () => {
     image: Bean,
     alt: "ProjImg",
     description:
-      "A full-stack responsive website encapsulating a cafe. Includes account sessions, secure password hashing, and multiple validated database CRUD operations. Developed for initial web software development university class.",
+      "A full-stack responsive website encapsulating a cafe. Includes account sessions, admin/user features, secure password hashing, and multiple validated database CRUD operations.",
     tech: ["HTML", "CSS", "PHP", "JavaScript", "Bootstrap", "MySQL", "Ajax"],
   };
 
@@ -51,7 +51,7 @@ export const Portfolio = () => {
     image: Site,
     alt: "ProjImg",
     description:
-      "A full-stack, responsive personal website created for fun. More description coming soon once I finish it :D",
+      "A full-stack, responsive personal website created for fun. Integrations with API's, my email, and more once I finish it :D",
     tech: ["React", "JavaScript", "CSS", "Some", "Database", "ThatI'llMake"],
   };
 

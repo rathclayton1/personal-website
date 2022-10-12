@@ -10,6 +10,8 @@ import {
   Paper,
   ListItemIcon,
   IconButton,
+  ImageList,
+  ImageListItem,
 } from "@mui/material";
 import { PlayCircle, ArrowRight } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
@@ -19,14 +21,16 @@ import "../index.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Basement from "../Images/basement.jpeg";
-import HomeDrums from "../Images/HomeDrums.webp";
 import Band from "../Images/band.jpeg";
-import Bathroom from "../Images/br.JPG";
 import OH from "../Images/coolOHs.png";
 import Daniel from "../Images/daniel1.jpeg";
 import Lips from "../Images/lips.jpeg";
 import Pilot from "../Images/pilot.png";
 import Church from "../Images/church.jpeg";
+import Getaway from "../Images/getaway.jpg";
+import Will from "../Images/will.jpg";
+import Virtual from "../Images/virtual.jpg";
+import NewYear from "../Images/newyear.jpg";
 import { CoolButton } from "../Pages/Home";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,10 +45,17 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "-1",
     filter: "brightness(70%)",
   },
-
   vertical: {
     maxWidth: "450px",
     height: "auto",
+  },
+  contain: {
+    height: "100%",
+    width: "100%",
+  },
+  frame: {
+    height: "auto",
+    width: "100%",
   },
 }));
 
@@ -56,6 +67,8 @@ export const Drums = () => {
   const classes = useStyles();
 
   const theme = useTheme();
+
+  const [swipe, setSwipe] = useState(true);
 
   const [data, setData] = useState({});
 
@@ -80,7 +93,7 @@ export const Drums = () => {
         return response.json();
       })
       .then((data) => {
-        fetch("https://api.spotify.com/v1/me/player/recently-played", {
+        fetch("https://api.spotify.com/v1/playlists/37i9dQZF1Epuwa3ItrviqK", {
           method: "GET",
           headers: {
             Accept: "application/json",
@@ -94,7 +107,7 @@ export const Drums = () => {
             }
             return response.json();
           })
-          .then((actualData) => setData(actualData.items))
+          .then((actualData) => setData(actualData.tracks.items))
           .catch((err) => {
             console.log(err.message);
           });
@@ -103,20 +116,68 @@ export const Drums = () => {
 
   const songs = Array.from(data);
 
+  const images = [
+    {
+      img: NewYear,
+      title: "newyear",
+    },
+    {
+      img: Daniel,
+      title: "daniel",
+    },
+    {
+      img: Band,
+      title: "band",
+    },
+    {
+      img: OH,
+      title: "oh",
+    },
+    {
+      img: Getaway,
+      title: "getaway",
+    },
+    {
+      img: Pilot,
+      title: "pilot",
+    },
+    {
+      img: Will,
+      title: "will",
+    },
+    {
+      img: Lips,
+      title: "lips",
+    },
+    {
+      img: Church,
+      title: "church",
+    },
+    {
+      img: Virtual,
+      title: "virtual",
+    },
+    {
+      img: Basement,
+      title: "Basement",
+    },
+  ];
+
   document.title = "Drums";
+
+  const isXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const isSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
+
+  const isLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <>
       <Grid
         container
         direction="column"
-        overflow="hidden"
-        overflowY="hidden"
-        overflowX="hidden"
         spacing={8}
         justifyContent="center"
         align="center"
@@ -139,7 +200,7 @@ export const Drums = () => {
           </Box>
         </Grid>
         <Grid item>
-          <Grid item md={6} marginTop="20em">
+          <Grid item marginTop="20em">
             <Typography
               variant={isSM ? "h4" : "h3"}
               align="center"
@@ -149,62 +210,63 @@ export const Drums = () => {
             </Typography>
           </Grid>
           <Grid
-            container
-            direction="row"
+            item
             marginTop={isSM ? "1em" : "4em"}
             display="flex"
             justifyContent="center"
             alignItems="center"
-            spacing={isSM ? 5 : -12}
+            md={7}
           >
-            <Grid item sm={12} md={6}>
-              <iframe
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                src="https://www.youtube.com/embed/sJb80P9rpto"
-                title="latestVid"
-                width={isSM ? "390px" : "630px"}
-                height={isSM ? "220px" : "354px"}
-              />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <iframe
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                src="https://www.youtube.com/embed/5rGrKL1ypQY"
-                title="latestVid"
-                width={isSM ? "390px" : "630px"}
-                height={isSM ? "220px" : "354px"}
-              />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <iframe
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                src="https://www.youtube.com/embed/IiKzRqqwB1k"
-                title="latestVid"
-                width={isSM ? "390px" : "630px"}
-                height={isSM ? "220px" : "354px"}
-              />
-            </Grid>
-            <Grid item md={6}>
-              <iframe
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                src="https://www.youtube.com/embed/Kvfh9yRVyN4"
-                title="latestVid"
-                width={isSM ? "390px" : "630px"}
-                height={isSM ? "220px" : "354px"}
-              />
-            </Grid>
+            <Carousel
+              autoPlay={swipe}
+              infiniteLoop
+              dynamicHeight
+              stopOnHover={false}
+              showStatus={false}
+              showThumbs={false}
+              showArrows={false}
+              onClickItem={() => setSwipe(false)}
+              interval={4200}
+            >
+              <div>
+                <iframe
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  src="https://www.youtube.com/embed/sJb80P9rpto"
+                  title="latestVid"
+                  width="100%"
+                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
+                />
+              </div>
+              <div>
+                <iframe
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  src="https://www.youtube.com/embed/5rGrKL1ypQY"
+                  title="latestVid"
+                  width="100%"
+                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
+                />
+              </div>
+              <div>
+                <iframe
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  src="https://www.youtube.com/embed/IiKzRqqwB1k"
+                  title="latestVid"
+                  width="100%"
+                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
+                />
+              </div>
+              
+            </Carousel>
           </Grid>
         </Grid>
         <Grid item>
-          <Grid container spacing={0}>
+          <Grid container spacing={0} justifyContent="center" align="center">
             <Grid
               item
               display="flex"
@@ -220,51 +282,19 @@ export const Drums = () => {
                 Lookbook
               </Typography>
             </Grid>
-            <Grid
-              item
-              display="flex"
-              xs={12}
-              justifyContent="center"
-              align="center"
-            >
-              <Carousel
-                autoPlay
-                infiniteLoop
-                dynamicHeight
-                stopOnHover={false}
-                showStatus={false}
-                showThumbs={false}
-                showArrows={false}
-                width={isSM ? "95%" : "60%"}
-              >
-                <div>
-                  <img src={HomeDrums} alt="1" />
-                </div>
-                <div>
-                  <img src={Lips} alt="2" className={classes.vertical} />
-                </div>
-                <div>
-                  <img src={Church} alt="9" />
-                </div>
-                <div>
-                  <img src={Band} alt="3" />
-                </div>
-                <div>
-                  <img src={OH} alt="4" />
-                </div>
-                <div>
-                  <img src={Daniel} alt="5" />
-                </div>
-                <div>
-                  <img src={Basement} alt="6" />
-                </div>
-                <div>
-                  <img src={Pilot} alt="7" className={classes.vertical} />
-                </div>
-                <div>
-                  <img src={Bathroom} alt="8" />
-                </div>
-              </Carousel>
+            <Grid item display="flex" xs={12} md={10}>
+              <ImageList variant="masonry" cols={isXS ? 2 : 3} gap={12}>
+                {images.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      src={`${item.img}`}
+                      srcSet={`${item.img}`}
+                      alt={item.title}
+                      loading="eager"
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
             </Grid>
           </Grid>
         </Grid>
@@ -278,10 +308,7 @@ export const Drums = () => {
               justifyContent={isMD ? "center" : "left"}
               align={isMD ? "center" : "left"}
             >
-              <Typography
-                variant={isSM ? "h4" : "h2"}
-                fontFamily="Silkscreen"
-              >
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
                 Need Drums?
               </Typography>
               <Typography
@@ -359,6 +386,8 @@ export const Drums = () => {
         <Grid item>
           <Typography variant={isSM ? "h2" : "h1"} fontFamily="Silkscreen">
             Gear I use
+            <br/>
+            . . .
           </Typography>
         </Grid>
       </Grid>

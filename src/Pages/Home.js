@@ -76,9 +76,9 @@ export const Home = () => {
   });
 
   const animate3 = useSpring({
-    from: { opacity: "0", color: "#65946a", y: 1000 },
-    to: { opacity: "1", color: "black", y: 20 },
-    config: { duration: "2800" },
+    from: { opacity: "0", color: "#65946a" },
+    to: { opacity: "1", color: "black" },
+    config: { duration: "4800" },
   });
 
   const AnimatedText = animated(Typography);
