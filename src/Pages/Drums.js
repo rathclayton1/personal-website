@@ -31,6 +31,15 @@ import Getaway from "../Images/getaway.jpg";
 import Will from "../Images/will.jpg";
 import Virtual from "../Images/virtual.jpg";
 import NewYear from "../Images/newyear.jpg";
+import Shells from "../Images/shells.png";
+import Snare from "../Images/snare.JPG";
+import RCrash from "../Images/crash.jpeg";
+import Hats from "../Images/hats.png";
+import China from "../Images/china.jpeg";
+import Ride from "../Images/ride.png";
+import LCrash from "../Images/lcrash.png";
+import Interface from "../Images/interface.webp";
+import Mics from "../Images/mics.png";
 import { CoolButton } from "../Pages/Home";
 
 const useStyles = makeStyles((theme) => ({
@@ -183,10 +192,9 @@ export const Drums = () => {
         align="center"
       >
         <Grid item>
-          <video autoPlay playsInLine loop muted className={classes.video}>
-            <source src={DrumVid} type="video/mp4" />
-          </video>
-          <Box display="flex" justifyContent="center">
+            <video oncontextmenu="return false;"  preload="auto" autoPlay playsInLine loop muted className={classes.video}>
+              <source src={DrumVid} type="video/mp4" />
+            </video>
             <Typography
               align="center"
               variant="h1"
@@ -197,7 +205,6 @@ export const Drums = () => {
             >
               DRUMS
             </Typography>
-          </Box>
         </Grid>
         <Grid item>
           <Grid item marginTop="20em">
@@ -225,9 +232,22 @@ export const Drums = () => {
               showStatus={false}
               showThumbs={false}
               showArrows={false}
-              onClickItem={() => setSwipe(false)}
+              onClickItem={() => setSwipe(!swipe)}
               interval={4200}
             >
+              <div>
+                <iframe
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  src="https://www.youtube.com/embed/hkz0P8SPpwI"
+                  title="latestVid"
+                  width="100%"
+                  height={
+                    isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"
+                  }
+                />
+              </div>
               <div>
                 <iframe
                   frameBorder="0"
@@ -236,7 +256,9 @@ export const Drums = () => {
                   src="https://www.youtube.com/embed/sJb80P9rpto"
                   title="latestVid"
                   width="100%"
-                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
+                  height={
+                    isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"
+                  }
                 />
               </div>
               <div>
@@ -247,21 +269,11 @@ export const Drums = () => {
                   src="https://www.youtube.com/embed/5rGrKL1ypQY"
                   title="latestVid"
                   width="100%"
-                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
+                  height={
+                    isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"
+                  }
                 />
               </div>
-              <div>
-                <iframe
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  src="https://www.youtube.com/embed/IiKzRqqwB1k"
-                  title="latestVid"
-                  width="100%"
-                  height={isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"}
-                />
-              </div>
-              
             </Carousel>
           </Grid>
         </Grid>
@@ -283,7 +295,7 @@ export const Drums = () => {
               </Typography>
             </Grid>
             <Grid item display="flex" xs={12} md={10}>
-              <ImageList variant="masonry" cols={isXS ? 2 : 3} gap={12}>
+              <ImageList variant="masonry" cols={isSM ? 2 : 3} gap={12}>
                 {images.map((item) => (
                   <ImageListItem key={item.img}>
                     <img
@@ -384,11 +396,137 @@ export const Drums = () => {
           </Grid>
         </Grid>
         <Grid item>
+        <a id="gear">
           <Typography variant={isSM ? "h2" : "h1"} fontFamily="Silkscreen">
             Gear I use
-            <br/>
-            . . .
           </Typography>
+          </a>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row">
+            <Grid item xs="12" md="6">
+              <img src={Shells} alt="shells" width="90%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Shells
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                DW Design Maple, Cherry Satin finish
+                <br />
+                18x22" Kick
+                <br />
+                8x10" Rack (not pictured)
+                <br />
+                9x12" Rack
+                <br />
+                14x16" Floor
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6">
+              <img src={Snare} alt="shells" width="90%" height="60.6%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Snare
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                DW Collector's Black Nickel over Brass, 6.5x14"
+                <br />
+                Die Cast Hoops
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+            Cymbals
+          </Typography>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            align="center"
+          >
+            <Grid item xs="12" md="6" lg="4">
+              <img src={Hats} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 15" Traditional Hats
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={LCrash} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Pure Alloy 18" Medium Crash
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={Ride} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 20" Traditional Medium Ride
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={RCrash} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 19" Traditional Medium Thin Crash
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={China} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 18" Brilliant China
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" marginBottom="10em">
+            <Grid item xs="12" md="6">
+              <img src={Mics} alt="shells" width="90%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Mics
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Snare Top: Shure Beta57A
+                <br />
+                Snare Bottom: Shure SM57
+                <br />
+                Kick In: Shure Beta 91A
+                <br />
+                Kick Out: Audix D6
+                <br />
+                Toms: AKG P170
+                <br />
+                Overheads: Rode NT5
+                <br />
+                Hats and China: Shure PG81
+                <br />
+                Stereo Rooms: MXL R144
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6">
+              <img src={Interface} alt="shells" width="90%" height="60.6%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Other Recording Schtuff
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+              Focusrite Scarlett 18i20 2nd Gen Audio Interface
+                <br />
+                Behringer ADA8200 Ultragain Extra Preamp
+                <br />
+                Logic Pro X
+                <br />
+                Slate Digital Everything Bundle plugins
+                <br />
+                GoPro Hero 7 Black
+                <br />
+                iPhone 11 Camera (sometimes)
+              </Typography>
+              
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </>
