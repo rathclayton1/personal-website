@@ -427,6 +427,132 @@ export const Drums = () => {
               </Typography>
             </Grid>
             <Grid item xs="12" md="6">
+              <img src={Snare} alt="shells" width="90%" height="60.6%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Snare
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                DW Collector's Black Nickel over Brass, 6.5x14"
+                <br />
+                Die Cast Hoops
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+            Cymbals
+          </Typography>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            align="center"
+          >
+            <Grid item xs="12" md="6" lg="4">
+              <img src={Hats} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 15" Traditional Hats
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={LCrash} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Pure Alloy 18" Medium Crash
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={Ride} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 20" Traditional Medium Ride
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={RCrash} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 19" Traditional Medium Thin Crash
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6" lg="4">
+              <img src={China} alt="shells" width="80%" height="80%" />
+              <br />
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Meinl Byzance 18" Brilliant China
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" marginBottom="10em">
+            <Grid item xs="12" md="6">
+              <img src={Mics} alt="shells" width="90%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Mics
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                Snare Top: Shure Beta57A
+                <br />
+                Snare Bottom: Shure SM57
+                <br />
+                Kick In: Shure Beta 91A
+                <br />
+                Kick Out: Audix D6
+                <br />
+                Toms: AKG P170
+                <br />
+                Overheads: Rode NT5
+                <br />
+                Hats and China: Shure PG81
+                <br />
+                Stereo Rooms: MXL R144
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6">
+              <img src={Interface} alt="shells" width="90%" height="60.6%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Other Recording Schtuff
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+              Focusrite Scarlett 18i20 2nd Gen Audio Interface
+                <br />
+                Behringer ADA8200 Ultragain Extra Preamp
+                <br />
+                Logic Pro X
+                <br />
+                Slate Digital Everything Bundle plugins
+                <br />
+                GoPro Hero 7 Black
+                <br />
+                iPhone 11 Camera (sometimes)
+              </Typography>
+              
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row">
+            <Grid item xs="12" md="6">
+              <img src={Shells} alt="shells" width="90%" />
+              <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
+                Shells
+              </Typography>
+              <Typography variant={isSM ? "h8" : "h6"} fontFamily="Silkscreen">
+                DW Design Maple, Cherry Satin finish
+                <br />
+                18x22" Kick
+                <br />
+                8x10" Rack (not pictured)
+                <br />
+                9x12" Rack
+                <br />
+                14x16" Floor
+              </Typography>
+            </Grid>
+            <Grid item xs="12" md="6">
               <img src={Snare} alt="shells" width="90%" />
               <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
                 Snare
