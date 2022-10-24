@@ -427,7 +427,7 @@ export const Drums = () => {
               </Typography>
             </Grid>
             <Grid item xs="12" md="6">
-              <img src={Snare} alt="shells" width="90%" height="60.6%" />
+              <img src={Snare} alt="shells" width="90%"/>
               <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
                 Snare
               </Typography>
@@ -512,7 +512,7 @@ export const Drums = () => {
               </Typography>
             </Grid>
             <Grid item xs="12" md="6">
-              <img src={Interface} alt="shells" width="90%" height="60.6%" />
+              <img src={Interface} alt="shells" width="90%"/>
               <Typography variant={isSM ? "h4" : "h2"} fontFamily="Silkscreen">
                 Other Recording Schtuff
               </Typography>
