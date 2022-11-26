@@ -247,6 +247,19 @@ export const Drums = () => {
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  src="https://www.youtube.com/embed/NAjYTPPE6FM"
+                  title="latestVid"
+                  width="100%"
+                  height={
+                    isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"
+                  }
+                />
+              </div>
+              <div>
+                <iframe
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                   src="https://www.youtube.com/embed/hkz0P8SPpwI"
                   title="latestVid"
                   width="100%"
@@ -261,19 +274,6 @@ export const Drums = () => {
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   src="https://www.youtube.com/embed/sJb80P9rpto"
-                  title="latestVid"
-                  width="100%"
-                  height={
-                    isXS ? "160px" : isSM ? "189px" : isMD ? "320px" : "428px"
-                  }
-                />
-              </div>
-              <div>
-                <iframe
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  src="https://www.youtube.com/embed/5rGrKL1ypQY"
                   title="latestVid"
                   width="100%"
                   height={
